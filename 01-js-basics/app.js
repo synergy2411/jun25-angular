@@ -187,31 +187,46 @@
 
 // console.log(f3, f5); // "Ross", undefined
 
-let book = {
-  author: "Mary Public",
-  noOfPages: 198,
-  isbn: 987654321,
-  genere: ["Melody", "Drama", "Action"],
-  published: {
-    year: 2024,
-  },
-};
+// let book = {
+//   author: "Mary Public",
+//   noOfPages: 198,
+//   isbn: 987654321,
+//   genere: ["Melody", "Drama", "Action"],
+//   published: {
+//     year: 2024,
+//   },
+// };
 
-let {
-  isbn,
-  author: bookAuthor,
-  genere,
-  published: { year },
-} = book;
+// let {
+//   isbn,
+//   author: bookAuthor,
+//   genere,
+//   published: { year },
+// } = book;
 
 // console.log(author, noOfPages);
 
-let [g1, g2, g3] = genere;
+// let [g1, g2, g3] = genere;
 
-console.log(isbn, bookAuthor, g2, year);
+// console.log(isbn, bookAuthor, g2, year);
 
-let users = [
-  { email: "x@test.com", age: 22 },
-  { email: "y@test.com", age: 23 },
-  { email: "z@test.com", age: 24 },
-];
+// let users = [
+//   { email: "x@test.com", age: 22 },
+//   { email: "y@test.com", age: 23 },
+//   { email: "z@test.com", age: 24 },
+// ];
+
+// let [u1, u2, u3] = users;
+
+// let { email: e1, age: a1 } = u1;
+
+// let { email: e2, age: a2 } = u2;
+
+// console.log(e1, a1, e2, a2);
+
+let a = 10,
+  b = 20;
+
+[a, b] = [b, a];
+
+console.log(a, b);

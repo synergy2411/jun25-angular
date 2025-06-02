@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Demo</title>
+  </head>
+  <body>
+    <p id="paragraphEl">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident,
+      necessitatibus.
+    </p>
+
+    <script>
+      // const paragraphEl = document.querySelector("#paragraphEl");
+      // paragraphEl.textContent = "New Content";
+      // setTimeout(() => {
+      //   alert("Who's this?");
+      // }, 1000);
+      // paragraphEl.style.color = "red";
+
+      let marks = [99, 98, 97, 96];
+      console.log("Start");
+      marks.forEach((mark) => console.log(mark));
+      console.log("End");
+
+      function demoFn(cb) {
+        console.log("Demo Called");
+        cb();
+        console.log("Ended");
+      }
+
+      demoFn(function () {
+        setTimeout(() => {
+          console.log("The Callback");
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
