@@ -66,3 +66,19 @@ Node Runtime Environment - libvu library - C++ Thread pool
   > Promise API - all, allSettled, any, resolve, reject
 
 # TypeScript
+
+# Creating vite project
+
+> npm create vite@latest > vanilla > typeScript
+> cd 02-ts-demo
+> npm install
+> npm run dev
+
+# TypeScript Advantages
+
+- Early errors
+- Better Intellisense
+- Future JS features support
+- Safety
+- Readability
+- Better with tools
