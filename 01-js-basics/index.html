@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Async Demo</title>
+    <script src="./promise-example.js"></script>
   </head>
   <body>
     <p id="paragraphEl">
@@ -19,22 +20,22 @@
       // }, 1000);
       // paragraphEl.style.color = "red";
 
-      let marks = [99, 98, 97, 96];
-      console.log("Start");
-      marks.forEach((mark) => console.log(mark));
-      console.log("End");
+      // let marks = [99, 98, 97, 96];
+      // console.log("Start");
+      // marks.forEach((mark) => console.log(mark));
+      // console.log("End");
 
-      function demoFn(cb) {
-        console.log("Demo Called");
-        cb();
-        console.log("Ended");
-      }
+      // function demoFn(cb) {
+      //   console.log("Demo Called");
+      //   cb();
+      //   console.log("Ended");
+      // }
 
-      demoFn(function () {
-        setTimeout(() => {
-          console.log("The Callback");
-        }, 1000);
-      });
+      // demoFn(function () {
+      //   setTimeout(() => {
+      //     console.log("The Callback");
+      //   }, 1000);
+      // });
     </script>
   </body>
 </html>

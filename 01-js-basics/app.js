@@ -187,24 +187,24 @@
 
 // console.log(f3, f5); // "Ross", undefined
 
-// let book = {
-//   author: "Mary Public",
-//   noOfPages: 198,
-//   isbn: 987654321,
-//   genere: ["Melody", "Drama", "Action"],
-//   published: {
-//     year: 2024,
-//   },
-// };
+let book = {
+  author: "Mary Public",
+  noOfPages: 198,
+  isbn: 987654321,
+  genere: ["Melody", "Drama", "Action"],
+  published: {
+    year: 2024,
+  },
+};
 
-// let {
-//   isbn,
-//   author: bookAuthor,
-//   genere,
-//   published: { year },
-// } = book;
+let {
+  isbn,
+  author: bookAuthor,
+  genere,
+  published: { year },
+} = book;
 
-// console.log(author, noOfPages);
+console.log(author, noOfPages);
 
 // let [g1, g2, g3] = genere;
 

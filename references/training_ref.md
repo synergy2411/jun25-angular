@@ -52,3 +52,17 @@ Node Runtime Environment - libvu library - C++ Thread pool
 
 - Creational : memory is allocated
 - Executional : assignments / return / logs
+
+# ES6 Features
+
+- Arrow Function
+- Rest / Spread
+- Destructuring
+- Sync / Async Code
+
+- Promises
+  > then().catch()
+  > Async...await
+  > Promise API - all, allSettled, any, resolve, reject
+
+# TypeScript
