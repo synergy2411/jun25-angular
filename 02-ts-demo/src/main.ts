@@ -68,46 +68,210 @@
 // bar = new Foo();
 // bar = new Bar();
 
-let varAny: any;
+// let varAny: any;
 
-varAny = "Hello";
-varAny = 102;
-varAny = true;
+// varAny = "Hello";
+// varAny = 102;
+// varAny = true;
 
-console.log(varAny);
+// console.log(varAny);
 
-let varUnknown: unknown;
+// let varUnknown: unknown;
 
-varUnknown = "Hello";
-// varUnknown = 102;
-// varUnknown = false;
+// varUnknown = "Hello";
+// // varUnknown = 102;
+// // varUnknown = false;
 
-if (typeof varUnknown === "string") {
-  varUnknown.toUpperCase();
+// if (typeof varUnknown === "string") {
+//   varUnknown.toUpperCase();
+// }
+
+// varUnknown = 201;
+
+// if (typeof varUnknown === "number") {
+//   varUnknown.toPrecision();
+// }
+
+// // let friends: Array<string>;
+// let friends: string[];
+
+// friends = ["Monica", "Joey", "Ross"];
+
+// let varTuple: [string, number];
+
+// varTuple = ["John Doe", 23];
+
+// let varUnion: string | number;
+// varUnion = "Twenty three";
+// varUnion = 23;
+
+// let varFn: Function;
+// varFn = () => console.log("Do something");
+
+// function doSomething(): never | void {
+//   throw new Error("Something went wrong");
+// }
+
+// TEMPLATE LITERALS - Back tick (``)
+// - Embed the variables
+// - Multiline strings
+// let username = "John Doe";
+// let age = 23;
+
+// let greetings = `Hello from ${username}!!
+
+// I'm ${age} years old.
+
+// `;
+
+// console.log(greetings);
+
+// // DEFAULT PARAMETER
+// function demoFn(arr: Array<number> = []) {
+//   //   arr = arr || [];
+
+//   if (arr.length > 2) {
+//     console.log("Good morning!");
+//   } else {
+//     console.log("Guden Morgan");
+//   }
+// }
+
+// demoFn();
+// demoFn([1, 2, 3]);
+
+// CLASSES
+
+// enum Role {
+//   "MANAGER",
+//   "ADMIN",
+//   "EMPLOYEE",
+// }
+
+// class Employee {
+//   // private empId: string;
+//   // private empName: string;
+//   // private age: number = 0;
+//   // private role: Role;
+
+//   // constructor(empId: string, empName: string, age: number, role: Role) {
+//   //   this.empId = empId;
+//   //   this.empName = empName;
+//   //   this.age = age;
+//   //   this.role = role;
+//   // }
+
+//   private _age: number = 0;
+
+//   constructor(
+//     private empId: string,
+//     private empName: string,
+//     private role: Role
+//   ) {}
+
+//   get age() {
+//     return this._age;
+//   }
+
+//   set age(value: number) {
+//     this._age = value;
+//   }
+
+//   getDetails() {
+//     return `${this.empId} - ${this.empName}  | Role : ${this.role}`;
+//   }
+// }
+
+// let john = new Employee("E001", "John Doe", Role.EMPLOYEE);
+// console.log(john.getDetails());
+// john.age = 23;
+// console.log(john.age);
+
+// class Calculator {
+
+//   constructor() { }
+//   // constructor(private age: number){}
+
+//   add(x: number, y: number): number;
+//   add(x: string, y: string): string;
+//   add(x: any, y: any): any {
+//     if (typeof x === "number" || typeof y === "number") {
+//       return x + y;
+//     }
+//     if (typeof x === "string" || typeof y === "string") {
+//       return x + " " + y;
+//     }
+//   }
+// }
+
+// let sum = new Calculator();
+// console.log("Add Two numbers : ", sum.add(4, 5));
+// console.log("Add Two strings : ", sum.add("Hello", "World"));
+
+// GENERICS
+
+function addAtBeginning<T>(item: T, arr: Array<T>): Array<T> {
+  return [item, ...arr];
 }
 
-varUnknown = 201;
+const numberArray = addAtBeginning<number>(99, [98, 96, 93]);
 
-if (typeof varUnknown === "number") {
-  varUnknown.toPrecision();
+console.log(numberArray[0]);
+
+const stringArray = addAtBeginning<string>("Hello", ["and", "Good", "Morning"]);
+
+console.log(stringArray[0]);
+
+interface IResource<T, K> {
+  resourceName: T;
+  resourceLocation: K;
 }
 
-// let friends: Array<string>;
-let friends: string[];
+let serverOne: IResource<string, string> = {
+  resourceName: "Server One",
+  resourceLocation: "Pune",
+};
 
-friends = ["Monica", "Joey", "Ross"];
+let serverTwo: IResource<number, string> = {
+  resourceName: 1022,
+  resourceLocation: "Bengaluru",
+};
 
-let varTuple: [string, number];
+class Stack<T> {
+  private list: Array<T> = [];
 
-varTuple = ["John Doe", 23];
-
-let varUnion: string | number;
-varUnion = "Twenty three";
-varUnion = 23;
-
-let varFn: Function;
-varFn = () => console.log("Do something");
-
-function doSomething(): never | void {
-  throw new Error("Something went wrong");
+  addItem(item: T) {
+    this.list.push(item);
+  }
+  removeItem(index: number) {
+    const [deletedItem] = this.list.splice(index, 1);
+    if (deletedItem) {
+      console.log("Deleted");
+    }
+  }
+  getList() {
+    return this.list;
+  }
 }
+
+let marks = new Stack<number>();
+marks.addItem(99);
+marks.addItem(97);
+marks.addItem(94);
+
+console.log(marks.getList());
+
+let friends = new Stack<string>();
+friends.addItem("Monica");
+friends.addItem("Joey");
+friends.addItem("Ross");
+console.log(friends);
+
+function demoGenericExtendsFn<T extends { length: number }>(item: T) {
+  console.log(item);
+}
+
+demoGenericExtendsFn<{ name: string; length: number }>({
+  name: "Box",
+  length: 12,
+});

@@ -61,11 +61,21 @@ Node Runtime Environment - libvu library - C++ Thread pool
 - Sync / Async Code
 
 - Promises
+  > Life Cycle State -> Pending -> Settled : Fulfilled, Rejected
   > then().catch()
   > Async...await
-  > Promise API - all, allSettled, any, resolve, reject
+  > Promise API - all, allSettled, any, race, resolve, reject
 
-# TypeScript
+# TypeScript : JavaScript with type Syntax
+
+# DataTypes :
+
+- all JS datatypes
+- any
+- unknown
+- tuple
+- never
+- union
 
 # Creating vite project
 
