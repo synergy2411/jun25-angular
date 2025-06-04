@@ -1,3 +1,11 @@
+import { getLuckyNumber, Calculator } from "./fortune";
+
+import addition, { mul } from "./utils";
+
+console.log("Your lucky number today : ", getLuckyNumber());
+console.log("Addition : ", addition(4, 5));
+console.log("Multiply : ", mul(4, 5));
+
 // Explicit Types
 // let x: string = "Hello World";
 
@@ -187,26 +195,9 @@
 // john.age = 23;
 // console.log(john.age);
 
-// class Calculator {
-
-//   constructor() { }
-//   // constructor(private age: number){}
-
-//   add(x: number, y: number): number;
-//   add(x: string, y: string): string;
-//   add(x: any, y: any): any {
-//     if (typeof x === "number" || typeof y === "number") {
-//       return x + y;
-//     }
-//     if (typeof x === "string" || typeof y === "string") {
-//       return x + " " + y;
-//     }
-//   }
-// }
-
-// let sum = new Calculator();
-// console.log("Add Two numbers : ", sum.add(4, 5));
-// console.log("Add Two strings : ", sum.add("Hello", "World"));
+let sum = new Calculator();
+console.log("Add Two numbers : ", sum.add(4, 5));
+console.log("Add Two strings : ", sum.add("Hello", "World"));
 
 // GENERICS
 
@@ -268,10 +259,23 @@ friends.addItem("Ross");
 console.log(friends);
 
 function demoGenericExtendsFn<T extends { length: number }>(item: T) {
-  console.log(item);
+  console.log(item.length);
 }
 
 demoGenericExtendsFn<{ name: string; length: number }>({
   name: "Box",
-  length: 12,
+  length: 11,
 });
+
+class Car {
+  private model: string = "Hyundai";
+  getDetails() {
+    return this.model;
+  }
+}
+
+interface ICar<T extends Car> {}
+
+let theCar = new Car();
+
+let myCar: ICar<Car> = theCar;

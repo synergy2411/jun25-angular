@@ -92,3 +92,32 @@ Node Runtime Environment - libvu library - C++ Thread pool
 - Safety
 - Readability
 - Better with tools
+
+---
+
+# Day 03
+
+- TypeScript
+- Angular
+
+# Decorators
+
+- Class : @Component({}), @Directive(), @Pipe(), @Injectable(), @NgModule()
+- Method : @HostListener()
+- Property : @Input(), @Output(), @HostBinding()
+- Parameter : @Inject, @Skip, @Optional
+
+@Component()
+class Test{
+
+@Input()
+title: string;
+
+@HostListener()
+fetch(@Optional param : string){}
+}
+
+# Module System - AMD, UMD, ESNext
+
+- NodeJS : CommonJS (module.exports / require())
+- Browsers : ESM (ECMA Script Module) import statement / export keyword
