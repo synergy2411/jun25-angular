@@ -121,3 +121,36 @@ fetch(@Optional param : string){}
 
 - NodeJS : CommonJS (module.exports / require())
 - Browsers : ESM (ECMA Script Module) import statement / export keyword
+
+# Client side JavaScript Libraries / Framework
+
+- Angular : 2014, State Management, DOM Manipulation, Component Based, Form Validation, XHR Calls, Animation, SPA Apps, Data Binding, Shadow DOM, Signals; heavy in size; enterprise level apps.
+- AngularJS : v1.x - 2011
+- React : light-weight, speed, flexibility, backed by FB, 2013, quickly render rhe UI, Virtual DOM, State, Props, Diffing Algo; 35kb; Redux, formik, react-router, fetch API, axios
+- Preact : based upon React; 5kb
+- Vue : component based, combi of React + Angular; Progressive framework; "Evan You", Vuex
+- jQuery : DOM Manipulation, Animation, AJAX
+- Ember : Framework; 2010; frequent change in API
+- Backbone : Client side MVC
+- Knockout : MVVM Pattern; 2 way data-binding
+- Electron : desktop apps using JS
+- Svelte :
+- D3 : Charts
+- Ionic : Framework; React/Angular/Vue to create Native Apps
+- Bootstrap : predefined CSS classes; Responsiveness;
+- Tensol Flow : ML
+- Express / Koa / Hapi / SailsJS / KrakenJS : Server side Framework
+- NextJS : Server / client side ; React - SSR
+- NodeJS : Server-side Platform
+
+- WebPack
+
+- Micro-frontends / Monorepos
+
+# Angular CLI Tool - ng
+
+> npm install -g @angular/cli@17
+> ng version
+> ng new frontend --no-standalone
+> cd frontend
+> npm start || ng serve

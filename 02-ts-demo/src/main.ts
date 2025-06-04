@@ -6,6 +6,8 @@ console.log("Your lucky number today : ", getLuckyNumber());
 console.log("Addition : ", addition(4, 5));
 console.log("Multiply : ", mul(4, 5));
 
+let myMarks: Array<number> = [];
+
 // Explicit Types
 // let x: string = "Hello World";
 
