@@ -30,6 +30,8 @@ export class LifeCycleComponent
 {
   @Input() title!: string;
 
+  username = 'John';
+
   ngOnChanges(changes: SimpleChanges): void {
     console.log('ngOnChanges', changes);
   }
