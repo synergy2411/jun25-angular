@@ -14,11 +14,16 @@ export class UsersComponent {
     isWorking: true,
     dob: new Date('Dec 12, 1965'),
     avatar: './assets/images/bill.jpeg',
+    votes: 120,
   };
 
   onMoreInfo(person: any) {
     alert(
       `Mr. ${person.lastName.toUpperCase()} is working with ${person.company}!`
     );
+  }
+
+  onInput(inputValue: string) {
+    this.user.votes = parseInt(inputValue);
   }
 }

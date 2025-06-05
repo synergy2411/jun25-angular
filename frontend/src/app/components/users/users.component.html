@@ -4,3 +4,14 @@
 <h1>{{ user.firstName }} {{ user.lastName }}</h1>
 <p>Date of birth : <span [innerHTML]="user.dob"></span></p>
 <p>Income : <span [innerHTML]="user.income"></span></p>
+
+<p>Total Votes : {{ user.votes }}</p>
+
+<input type="number" [(ngModel)]="user.votes" />
+
+<input
+  type="number"
+  [value]="user.votes"
+  (input)="onInput(theInput.value)"
+  #theInput
+/>
