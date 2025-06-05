@@ -1,0 +1,6 @@
+<img [src]="user.avatar" [alt]="user.lastName" />
+<button (click)="onMoreInfo(user)">More Info</button>
+
+<h1>{{ user.firstName }} {{ user.lastName }}</h1>
+<p>Date of birth : <span [innerHTML]="user.dob"></span></p>
+<p>Income : <span [innerHTML]="user.income"></span></p>

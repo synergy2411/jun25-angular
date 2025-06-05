@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.6" pages="2">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.1.3" pages="3">
   <diagram name="Page-1" id="xHCG6ZKqmYHIGINIzUaK">
     <mxGraphModel dx="833" dy="489" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -69,6 +69,50 @@
         </mxCell>
         <mxCell id="gnhaA4r1T7iJTCCgqoIU-14" value="Serverless (Cloud)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="460" y="428" width="120" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="meJ6_5HiJ64cH3cG6W3h" name="Page-3">
+    <mxGraphModel dx="694" dy="408" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iOODoI-3o-cY-_SvXfL1-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iOODoI-3o-cY-_SvXfL1-1" target="iOODoI-3o-cY-_SvXfL1-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iOODoI-3o-cY-_SvXfL1-1" value="npm start" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="135" y="145" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iOODoI-3o-cY-_SvXfL1-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iOODoI-3o-cY-_SvXfL1-2" target="iOODoI-3o-cY-_SvXfL1-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iOODoI-3o-cY-_SvXfL1-2" value="Development Server&lt;div&gt;localhost:4200&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="255" y="140" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iOODoI-3o-cY-_SvXfL1-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iOODoI-3o-cY-_SvXfL1-4" target="iOODoI-3o-cY-_SvXfL1-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iOODoI-3o-cY-_SvXfL1-4" value="index.html&lt;div&gt;&amp;lt;app-root&amp;gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="490" y="140" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iOODoI-3o-cY-_SvXfL1-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iOODoI-3o-cY-_SvXfL1-6" target="iOODoI-3o-cY-_SvXfL1-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iOODoI-3o-cY-_SvXfL1-6" value="main.ts&lt;div&gt;(AppModule)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="485" y="260" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iOODoI-3o-cY-_SvXfL1-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iOODoI-3o-cY-_SvXfL1-8" target="iOODoI-3o-cY-_SvXfL1-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="iOODoI-3o-cY-_SvXfL1-8" value="AppModule bootstraps&amp;nbsp;&lt;div&gt;Root Component&lt;/div&gt;&lt;div&gt;(AppComponent)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="285" y="250" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iOODoI-3o-cY-_SvXfL1-10" value="AppComponent&lt;div&gt;TS / HTML / CSS / SPEC&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="50" y="260" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iOODoI-3o-cY-_SvXfL1-12" value="Angular Bootstrap Process" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="340" y="60" width="100" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

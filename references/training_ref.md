@@ -154,3 +154,22 @@ fetch(@Optional param : string){}
 > ng new frontend --no-standalone
 > cd frontend
 > npm start || ng serve
+
+# Angular Essentials -
+
+- Angular Language Service Plugin
+- Angular DevTools from Chrome web store
+
+# Angular Building blocks -
+
+- Component
+- Directive
+- Pipe
+- Service
+- Module
+
+# Generating Components
+
+> ng generate help
+> ng generate component components/users
+> ng g c components/users
