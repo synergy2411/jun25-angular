@@ -1,5 +1,18 @@
-<!-- user-image -->
-<app-user-img [user]="user" (childEvent)="onMoreInfo($event)"></app-user-img>
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col-4">
+        <!-- user-image -->
+        <app-user-img
+          [user]="user"
+          (childEvent)="onMoreInfo($event)"
+        ></app-user-img>
+      </div>
 
-<!-- user-info -->
-<app-user-info [user]="user"></app-user-info>
+      <div class="col-8">
+        <!-- user-info -->
+        <app-user-info [user]="user"></app-user-info>
+      </div>
+    </div>
+  </li>
+</ul>

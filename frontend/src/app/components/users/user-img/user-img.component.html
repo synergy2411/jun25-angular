@@ -1,2 +1,9 @@
-<img [src]="user.avatar" [alt]="user.lastName" />
-<button (click)="onClick(user)">More Info</button>
+<div class="text-center">
+  <img
+    class="rounded-circle img-fluid mb-3"
+    [src]="user.avatar"
+    [alt]="user.lastName"
+  />
+
+  <button (click)="onClick(user)" class="btn btn-info">More Info</button>
+</div>

@@ -173,3 +173,10 @@ fetch(@Optional param : string){}
 > ng generate help
 > ng generate component components/users
 > ng g c components/users
+> ng g c components/users/user-img
+> ng g c components/users/user-info
+
+# Install Bootstrap Library
+
+> npm install bootstrap
+> angular.json > styles > "./node_modules/bootstrap/dist/css/bootstrap.min.css"

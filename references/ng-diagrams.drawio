@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.1.3" pages="3">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.1.3" pages="5">
   <diagram name="Page-1" id="xHCG6ZKqmYHIGINIzUaK">
     <mxGraphModel dx="833" dy="489" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -113,6 +113,100 @@
         </mxCell>
         <mxCell id="iOODoI-3o-cY-_SvXfL1-12" value="Angular Bootstrap Process" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
           <mxGeometry x="340" y="60" width="100" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="T2R3cWcPToN73oV4dLKp" name="Page-4">
+    <mxGraphModel dx="595" dy="349" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="No9ivg-RlVNZmDH2ZosN-1" value="Component Class" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="145" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="No9ivg-RlVNZmDH2ZosN-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="No9ivg-RlVNZmDH2ZosN-2" target="No9ivg-RlVNZmDH2ZosN-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="515" y="350" />
+              <mxPoint x="205" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="No9ivg-RlVNZmDH2ZosN-2" value="Component&amp;nbsp;&lt;div&gt;Template&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="455" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="No9ivg-RlVNZmDH2ZosN-3" value="Data / Model" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="238" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="No9ivg-RlVNZmDH2ZosN-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.542;entryY=-0.007;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="No9ivg-RlVNZmDH2ZosN-1" target="No9ivg-RlVNZmDH2ZosN-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="205" y="140" />
+              <mxPoint x="520" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="No9ivg-RlVNZmDH2ZosN-6" value="[ Property Binding ]&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="299" y="150" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="No9ivg-RlVNZmDH2ZosN-8" value="( Event Binding )&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="304" y="308" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="No9ivg-RlVNZmDH2ZosN-9" value="Data Binding" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="304" y="70" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="No9ivg-RlVNZmDH2ZosN-10" value="2 way data binding - Banana in the Box" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="215" y="378" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="No9ivg-RlVNZmDH2ZosN-11" value="[ PB ]&amp;nbsp; &amp;nbsp;+&amp;nbsp; &amp;nbsp;(. EB&amp;nbsp; )" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="260" y="400" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="No9ivg-RlVNZmDH2ZosN-12" value="[ ( ngModel ) ]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="270" y="438" width="100" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="YfjrEzLQt79x_k_3NdWQ" name="Page-5">
+    <mxGraphModel dx="724" dy="425" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OPIFBlte9g5XKjhzY2nz-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="OPIFBlte9g5XKjhzY2nz-1" target="OPIFBlte9g5XKjhzY2nz-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="230" />
+              <mxPoint x="380" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OPIFBlte9g5XKjhzY2nz-1" value="Users&lt;div&gt;Component&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OPIFBlte9g5XKjhzY2nz-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="OPIFBlte9g5XKjhzY2nz-2" target="OPIFBlte9g5XKjhzY2nz-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OPIFBlte9g5XKjhzY2nz-2" value="UserImage&lt;div&gt;Component&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OPIFBlte9g5XKjhzY2nz-6" value="users (model)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="230" y="98" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OPIFBlte9g5XKjhzY2nz-7" value="@Input()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="250" y="325" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OPIFBlte9g5XKjhzY2nz-8" value="[ Property Binding ]&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="215" y="128" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OPIFBlte9g5XKjhzY2nz-10" value="@Output() + EventEmitter" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="470" y="325" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OPIFBlte9g5XKjhzY2nz-11" value="( Event Binding )" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="470" y="105" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OPIFBlte9g5XKjhzY2nz-12" value="Nested Component Communication" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="370" y="30" width="100" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
