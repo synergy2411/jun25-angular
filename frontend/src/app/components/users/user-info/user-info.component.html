@@ -1,6 +1,9 @@
-<h1>{{ user.firstName }} {{ user.lastName }}</h1>
+<!-- <h1>{{ user.firstName }} {{ user.lastName }}</h1> -->
+<ng-content select=".heading"></ng-content>
+
 <p>Date of birth : <span [innerHTML]="user.dob"></span></p>
-<p>Income : <span [innerHTML]="user.income"></span></p>
+<!-- <p>Income : <span [innerHTML]="user.income"></span></p> -->
+<ng-content select=".user-income"></ng-content>
 
 <p>Total Votes : {{ user.votes }}</p>
 

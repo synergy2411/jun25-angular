@@ -11,7 +11,10 @@
 
       <div class="col-8">
         <!-- user-info -->
-        <app-user-info [user]="user"></app-user-info>
+        <app-user-info [user]="user">
+          <h2 class="heading">{{ user.firstName }} {{ user.lastName }}</h2>
+          <p class="user-income">Income : {{ user.income }}</p>
+        </app-user-info>
       </div>
     </div>
   </li>
