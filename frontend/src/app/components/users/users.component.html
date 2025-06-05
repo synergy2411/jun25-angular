@@ -1,17 +1,5 @@
-<img [src]="user.avatar" [alt]="user.lastName" />
-<button (click)="onMoreInfo(user)">More Info</button>
+<!-- user-image -->
+<app-user-img [user]="user" (childEvent)="onMoreInfo($event)"></app-user-img>
 
-<h1>{{ user.firstName }} {{ user.lastName }}</h1>
-<p>Date of birth : <span [innerHTML]="user.dob"></span></p>
-<p>Income : <span [innerHTML]="user.income"></span></p>
-
-<p>Total Votes : {{ user.votes }}</p>
-
-<input type="number" [(ngModel)]="user.votes" />
-
-<input
-  type="number"
-  [value]="user.votes"
-  (input)="onInput(theInput.value)"
-  #theInput
-/>
+<!-- user-info -->
+<app-user-info [user]="user"></app-user-info>
