@@ -180,3 +180,28 @@ fetch(@Optional param : string){}
 
 > npm install bootstrap
 > angular.json > styles > "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+> restart the server after changing angular.json everytime
+
+# Components -
+
+- Resuable
+- Template
+- Encapsulation / Shadow DOM
+- Data Binding - [Property] / (Event) Binding / 2 way data-binding [(ngModel)]
+- Nested Comp Communication - @Input() / @Output() + EventEmitter
+- Content Projection
+- LifeCyle Method:
+  > onChanges
+  > onInit
+  > doCheck
+  > afterContentInit
+  > afterContentChecked
+  > afterViewInit
+  > afterViewChecked
+  > onDestroy
+
+---
+
+# Directive
+
+# Pipe

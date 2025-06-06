@@ -7,9 +7,10 @@ import { UsersComponent } from './components/users/users.component';
 import { UserImgComponent } from './components/users/user-img/user-img.component';
 import { UserInfoComponent } from './components/users/user-info/user-info.component';
 import { LifeCycleComponent } from './components/demo/life-cycle/life-cycle.component';
+import { DirectiveExampleComponent } from './components/demo/directive-example/directive-example.component';
 
 @NgModule({
-  declarations: [AppComponent, UsersComponent, UserImgComponent, UserInfoComponent, LifeCycleComponent],
+  declarations: [AppComponent, UsersComponent, UserImgComponent, UserInfoComponent, LifeCycleComponent, DirectiveExampleComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
