@@ -205,3 +205,25 @@ fetch(@Optional param : string){}
 # Directive
 
 # Pipe
+
+# ViewEncapsulation
+
+- Emulated (default) : local CSS will override global CSS rule
+- ShadowDOM : only local CSS will take effect. Global CSS will not be applied
+- None : local CSS will affect other component's template as well
+
+## Case 01 -
+
+- Comp A (AppComponent)> Emulated (h1 {color : green})
+- Comp B (DirectiveExample)> None (h1 {color: blue} )
+
+## Conclusion : Emulated override the None property for same CSS rule
+
+## Case 02-
+
+- Comp A (AppComponent) > ShadowDOM (h1 {color : grey })
+- Comp B (DirectiveExample) > None (h1 {color : blue})
+
+- Global CSS > h1 { color : goldenrod}
+
+## Conclusion : None will apply over ShadowDOM

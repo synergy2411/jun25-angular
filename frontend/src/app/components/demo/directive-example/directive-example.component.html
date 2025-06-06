@@ -14,3 +14,69 @@
 >
   Attribute Directive Demo - ngClass
 </h2>
+
+<table class="table table-stripped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Qty</th>
+      <th>First</th>
+      <th>Last</th>
+      <th>Even</th>
+      <th>Odd</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="
+        let product of products;
+        index as i;
+        first as isFirst;
+        last as isLast;
+        even as isEven;
+        odd as isOdd
+      "
+    >
+      <td>{{ i + 1 }}</td>
+      <td>{{ product.title }}</td>
+      <td>{{ product.price }}</td>
+      <td>
+        <span *ngIf="product.isAvailable; else productNotAvailable">{{
+          product.qty
+        }}</span>
+      </td>
+      <td>{{ isFirst }}</td>
+      <td>{{ isLast }}</td>
+      <td>{{ isEven }}</td>
+      <td>{{ isOdd }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #productNotAvailable>
+  <span>NA</span>
+</ng-template>
+
+<hr />
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" (click)="tab = 1">Add New</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="tab = 2">Service</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" (click)="tab = 3">Contact Us</a>
+  </li>
+</ul>
+<br />
+
+<div [ngSwitch]="tab">
+  <div *ngSwitchCase="1">Adding new value</div>
+  <div *ngSwitchCase="2">All Services</div>
+  <div *ngSwitchCase="3">Contact Us</div>
+  <div *ngSwitchDefault>Default output</div>
+</div>
