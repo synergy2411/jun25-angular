@@ -1,11 +1,15 @@
-<!-- <h1>{{ user.firstName }} {{ user.lastName }}</h1> -->
-<ng-content select=".heading"></ng-content>
+<h1>{{ user.firstName | titlecase }} {{ user.lastName | titlecase }}</h1>
+<!-- <ng-content select=".heading"></ng-content> -->
 
-<p>Date of birth : <span [innerHTML]="user.dob"></span></p>
-<!-- <p>Income : <span [innerHTML]="user.income"></span></p> -->
-<ng-content select=".user-income"></ng-content>
+<p>
+  Date of birth : <span [innerHTML]="user.dob | date : 'dd/MM/yyyy'"></span>
+</p>
+<p>Income : <span [innerHTML]="user.income | currency : 'INR'"></span></p>
 
-<p>Total Votes : {{ user.votes }}</p>
+<!-- <ng-content select=".user-income"></ng-content> -->
+
+<p>Total Votes : {{ user.votes | number : "2.2-5" }}</p>
+<p>Total Votes : {{ user.votes | percent }}</p>
 
 <input type="number" [(ngModel)]="user.votes" />
 
@@ -15,3 +19,5 @@
   (input)="onInput(theInput.value)"
   #theInput
 />
+
+{{ user | json }}

@@ -1,0 +1,31 @@
+<h2>Pipe Example Component</h2>
+
+<h4>Async Value : {{ promise | async }}</h4>
+
+<p>Contact Number : {{ contactNumber | countryCode }}</p>
+
+<p>Reverse : {{ greetings | reverse }}</p>
+
+<hr />
+
+<div class="row mb-4">
+  <div class="col-6">
+    <select class="form-control" [(ngModel)]="filteredStatus">
+      <option value="">Select Option</option>
+      <option value="pending">Pending Tasks</option>
+      <option value="completed">Completed Tasks</option>
+    </select>
+  </div>
+</div>
+
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    *ngFor="let todo of todoCollection | filter : filteredStatus"
+  >
+    <p>
+      {{ todo.label | uppercase }}
+      <span class="float-end">{{ todo.status }}</span>
+    </p>
+  </li>
+</ul>

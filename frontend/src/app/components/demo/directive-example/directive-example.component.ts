@@ -30,4 +30,8 @@ export class DirectiveExampleComponent {
     this.dynamicClass['my-border'] = !this.dynamicClass['my-border'];
     this.dynamicClass['my-feature'] = !this.dynamicClass['my-feature'];
   }
+
+  theEvent() {
+    console.log('Inside Class - Custom Event');
+  }
 }
