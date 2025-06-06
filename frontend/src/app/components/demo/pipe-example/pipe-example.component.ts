@@ -23,4 +23,8 @@ export class PipeExampleComponent {
     { label: 'Grocery', status: 'completed' },
   ];
   filteredStatus = '';
+
+  onAddNewTodo() {
+    this.todoCollection.push({ label: 'New item', status: 'pending' });
+  }
 }

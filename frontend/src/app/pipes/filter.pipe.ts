@@ -7,9 +7,11 @@ type Todo = {
 
 @Pipe({
   name: 'filter',
+  pure: false,
 })
 export class FilterPipe implements PipeTransform {
   transform(todoCollection: Todo[], filteredStatus: string): Todo[] {
+    console.log('[TANSFORMS]');
     if (filteredStatus === '') {
       return todoCollection;
     }
