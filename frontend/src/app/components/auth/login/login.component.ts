@@ -8,6 +8,6 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
   submitHandler(loginForm: NgForm) {
-    console.log(loginForm.value);
+    console.log(loginForm);
   }
 }
