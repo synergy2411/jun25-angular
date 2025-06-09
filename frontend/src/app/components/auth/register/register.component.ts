@@ -17,6 +17,15 @@ import {
 export class RegisterComponent {
   registerForm!: FormGroup;
 
+  countries = [
+    {
+      id: '101',
+      name: 'United State',
+    },
+    { id: '102', name: 'India' },
+    { id: '103', name: 'Canada' },
+  ];
+
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group(
       {
@@ -35,6 +44,9 @@ export class RegisterComponent {
           RegisterComponent.confirmPasswordValidator,
         ]),
         hobbies: new FormArray([]),
+        tnc: new FormControl('', [Validators.requiredTrue]),
+        role: new FormControl(),
+        selectedCountry: new FormControl(),
       }
       // {
       //   validators: [RegisterComponent.formPasswordValidator],
@@ -56,6 +68,14 @@ export class RegisterComponent {
 
   get hobbies() {
     return this.registerForm.controls['hobbies'] as FormArray;
+  }
+
+  get selectedCountry() {
+    return this.registerForm.controls['selectedCountry'] as FormControl;
+  }
+
+  get tnc() {
+    return this.registerForm.controls['tnc'] as FormControl;
   }
 
   onSubmit() {

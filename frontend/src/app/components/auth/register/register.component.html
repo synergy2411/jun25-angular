@@ -138,13 +138,88 @@
             </div>
           </div>
 
-          <p>Hobbies : {{ hobbies.value | json }}</p>
+          <!-- <p>Hobbies : {{ hobbies.value | json }}</p> -->
+
+          <!-- Roles -->
+          <p>Select your role -</p>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name=""
+              value="admin"
+              id="role"
+              formControlName="role"
+            />
+            <label class="form-check-label" for="role"> Admin </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              value="manager"
+              name=""
+              id=""
+              formControlName="role"
+            />
+            <label class="form-check-label" for=""> Manager </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              value="developer"
+              name=""
+              id=""
+              formControlName="role"
+            />
+            <label class="form-check-label" for=""> Developer </label>
+          </div>
+
+          <!-- Countries -->
+          <div class="mb-3">
+            <label for="" class="form-label">Country</label>
+            <select
+              class="form-select form-select-lg"
+              name=""
+              id=""
+              formControlName="selectedCountry"
+            >
+              <option selected>Select Country</option>
+              <ng-container *ngFor="let country of countries">
+                <option [ngValue]="country.id">
+                  {{ country.name }}
+                </option>
+              </ng-container>
+            </select>
+          </div>
+
+          <!-- Terms & Conditions -->
+
+          <div class="form-check my-3">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id=""
+              formControlName="tnc"
+            />
+            <label class="form-check-label" for="">
+              I accept all Terms and Conditions</label
+            >
+          </div>
 
           <!-- buttons = Register, Reset -->
           <div class="row">
             <div class="col">
               <div class="d-grid">
-                <button type="submit" class="btn btn-success">Register</button>
+                <button
+                  type="submit"
+                  [disabled]="!registerForm.valid"
+                  class="btn btn-success"
+                >
+                  Register
+                </button>
               </div>
             </div>
             <div class="col">
@@ -153,8 +228,8 @@
               </div>
             </div>
           </div>
-          <p>Form : {{ registerForm.value | json }}</p>
-          <p>Form Error : {{ registerForm.errors | json }}</p>
+          <!-- <p>Form : {{ registerForm.value | json }}</p>
+          <p>Form Error : {{ registerForm.errors | json }}</p> -->
         </form>
       </div>
     </div>
