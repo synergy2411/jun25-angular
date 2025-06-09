@@ -272,5 +272,10 @@ friends = ["Monica", "Joey", "Ross", "Rachel"] // Pure Change
   > ng g c components/auth/login [email, password]
 
 - Reactive Form / Model Driven
+  > FormControl : individual form element eg. one input element
+  > FormGroup : represents complete form
+  > FormBuilder: way of quickly creating form group
+  > FormArray: dynamically generate/add form elements
+  > ng g c components/auth/register [username, password, confirmPassword, hobbies]
 
 # Service
