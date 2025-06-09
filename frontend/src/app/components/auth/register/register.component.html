@@ -10,26 +10,91 @@
           <div class="form-floating mb-3">
             <input
               type="text"
-              class="form-control"
+              class="form-control mb-2"
               name="username"
               id="username"
               placeholder=""
               formControlName="username"
             />
             <label for="username">Username</label>
+            <div *ngIf="username.dirty && username.touched">
+              <p
+                *ngIf="username.hasError('required')"
+                class="alert alert-danger"
+              >
+                *Username is mandatory field
+              </p>
+              <p *ngIf="username.hasError('email')" class="alert alert-danger">
+                *Username should be in email format
+              </p>
+              <p
+                *ngIf="username.hasError('lowercaseError')"
+                class="alert alert-danger"
+              >
+                *Username should be in lowercase only
+              </p>
+            </div>
           </div>
 
           <!-- password -->
           <div class="form-floating mb-3">
             <input
               type="password"
-              class="form-control"
+              class="form-control mb-2"
               name="password"
               id="password"
               placeholder=""
               formControlName="password"
             />
             <label for="password">Password</label>
+
+            <div *ngIf="password.dirty && password.touched">
+              <p
+                *ngIf="password.hasError('required')"
+                class="alert alert-danger"
+              >
+                *Password is mandatory field
+              </p>
+              <p
+                *ngIf="password.hasError('minlength')"
+                class="alert alert-danger"
+              >
+                *Password must contain at least 6 characters
+              </p>
+              <p
+                *ngIf="password.hasError('exclamtionError')"
+                class="alert alert-danger"
+              >
+                *Password must contain exclamation sign (!)
+              </p>
+            </div>
+          </div>
+
+          <!-- confirm password -->
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              class="form-control mb-2"
+              name="cnfPassword"
+              id="cnfPassword"
+              placeholder=""
+              formControlName="cnfPassword"
+            />
+            <label for="cnfPassword">Confirm Password</label>
+            <div *ngIf="cnfPassword.dirty && cnfPassword.invalid">
+              <p
+                *ngIf="cnfPassword.hasError('required')"
+                class="alert alert-danger"
+              >
+                *Confirm Password is mandatory field
+              </p>
+              <p
+                *ngIf="cnfPassword.hasError('passwordMismatchedError')"
+                class="alert alert-danger"
+              >
+                *Confirm Password does not match with password field
+              </p>
+            </div>
           </div>
 
           <!-- buttons = Register, Reset -->
@@ -45,6 +110,7 @@
               </div>
             </div>
           </div>
+          Form : {{ registerForm.value | json }}
         </form>
       </div>
     </div>
