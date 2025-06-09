@@ -5,7 +5,7 @@
         <h2 class="text-center">Login Form</h2>
       </div>
       <div class="card-body">
-        <form #loginForm="ngForm">
+        <form #loginForm="ngForm" (ngSubmit)="submitHandler(loginForm)">
           <!-- email -->
           <div class="form-floating mb-3">
             <input
@@ -49,15 +49,40 @@
               required
               minlength="6"
               ngModel
+              #passwordInput="ngModel"
             />
             <label for="password">Password</label>
+            <div
+              *ngIf="
+                passwordInput.dirty &&
+                passwordInput.touched &&
+                passwordInput.errors
+              "
+            >
+              <p
+                *ngIf="passwordInput.hasError('required')"
+                class="alert alert-danger"
+              >
+                *Password is mandatory field
+              </p>
+              <p
+                *ngIf="passwordInput.hasError('minlength')"
+                class="alert alert-danger"
+              >
+                *Password should be 6 characters long
+              </p>
+            </div>
           </div>
 
           <!-- buttons - Submit / Reset -->
           <div class="row">
             <div class="col">
               <div class="d-grid">
-                <button [disabled]="!loginForm.valid" class="btn btn-primary">
+                <button
+                  type="submit"
+                  [disabled]="!loginForm.valid"
+                  class="btn btn-primary"
+                >
                   Login
                 </button>
               </div>
@@ -73,12 +98,12 @@
               </div>
             </div>
           </div>
-          <p>Form Value : {{ loginForm.value | json }}</p>
+          <!-- <p>Form Value : {{ loginForm.value | json }}</p>
           <p>Valid : {{ loginForm.valid }}</p>
           <p>Dirty : {{ loginForm.dirty }}</p>
 
           <p>Email Input Valid : {{ emailInput.valid }}</p>
-          <p>Email Input Error : {{ emailInput.errors | json }}</p>
+          <p>Email Input Error : {{ emailInput.errors | json }}</p> -->
         </form>
       </div>
     </div>
