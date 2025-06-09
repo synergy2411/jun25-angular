@@ -97,6 +97,49 @@
             </div>
           </div>
 
+          <!-- Hobbies -->
+          <div class="mb-4">
+            <button (click)="onAddnewHobby()" class="btn btn-warning mb-2">
+              Add New Hobby
+            </button>
+            <div formArrayName="hobbies">
+              <div *ngFor="let hobby of hobbies.controls; index as i">
+                <div [formGroupName]="i">
+                  <div class="row mb-1">
+                    <div class="col-5">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="name"
+                        formControlName="name"
+                      />
+                    </div>
+                    <div class="col-5">
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="frequency (week)"
+                        formControlName="freq"
+                      />
+                    </div>
+                    <div class="col-2">
+                      <div class="d-grid">
+                        <button
+                          class="btn btn-outline-danger"
+                          (click)="onDeleteHobby(i)"
+                        >
+                          🗑️
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>Hobbies : {{ hobbies.value | json }}</p>
+
           <!-- buttons = Register, Reset -->
           <div class="row">
             <div class="col">
@@ -110,7 +153,8 @@
               </div>
             </div>
           </div>
-          Form : {{ registerForm.value | json }}
+          <p>Form : {{ registerForm.value | json }}</p>
+          <p>Form Error : {{ registerForm.errors | json }}</p>
         </form>
       </div>
     </div>
