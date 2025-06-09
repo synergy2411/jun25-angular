@@ -202,9 +202,27 @@ fetch(@Optional param : string){}
 
 ---
 
-# Directive
+# Directive -
 
-# Pipe
+- Attribute Directive : ngClass, ngStyle
+- Structural Directive : *ngIf, *ngFor, \*ngSwitch
+
+- Custom Directive
+
+  > ng g d directives/highlight
+
+- @HostBinding() : binds the host element property with class variables
+- @HostListener() : binds the host element event with class method
+
+# Pipe : format the UI
+
+- uppercase, lowercase, titlecase
+- json
+- async
+- percent
+- number
+- currency
+- date
 
 # ViewEncapsulation
 
@@ -227,3 +245,32 @@ fetch(@Optional param : string){}
 - Global CSS > h1 { color : goldenrod}
 
 ## Conclusion : None will apply over ShadowDOM
+
+# Custom Pipes
+
+- Pure (default): runs for mutable change only
+- Impure : runs for both pure and impure changes
+
+let user = { name : "John" }
+
+user.name = "Jenny"; // Immutable Change / Impure
+
+user = { // Mutable Change / Pure
+name : "Mary"
+}
+
+let friends = ["Monica", "Joey", "Ross"]
+friends.push("Rachel"); // Impure
+friends = ["Monica", "Joey", "Ross", "Rachel"] // Pure Change
+
+---
+
+# Forms
+
+- Template Driven
+
+  > ng g c components/auth/login [email, password]
+
+- Reactive Form / Model Driven
+
+# Service
