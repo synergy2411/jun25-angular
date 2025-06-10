@@ -20,6 +20,7 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { CounterService } from './services/counter.service';
 import { CounterAComponent } from './components/demo/counter-a/counter-a.component';
 import { CounterBComponent } from './components/demo/counter-b/counter-b.component';
+import { ObservableExampleComponent } from './components/demo/observable-example/observable-example.component';
 
 @NgModule({
   declarations: [
@@ -40,9 +41,15 @@ import { CounterBComponent } from './components/demo/counter-b/counter-b.compone
     RegisterComponent,
     CounterAComponent,
     CounterBComponent,
+    ObservableExampleComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
-  providers: [CounterService],
+  providers: [
+    {
+      provide: CounterService,
+      useClass: CounterService,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
