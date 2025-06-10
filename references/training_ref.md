@@ -269,13 +269,78 @@ friends = ["Monica", "Joey", "Ross", "Rachel"] // Pure Change
 
 - Template Driven
 
+  > "ngForm" Object (NgForm)
+  > Validation on template
+  > ngModel
+
   > ng g c components/auth/login [email, password]
 
 - Reactive Form / Model Driven
+
+  > Programmatically creation of Form using FormArray
   > FormControl : individual form element eg. one input element
   > FormGroup : represents complete form
   > FormBuilder: way of quickly creating form group
   > FormArray: dynamically generate/add form elements
   > ng g c components/auth/register [username, password, confirmPassword, hobbies]
 
-# Service
+- Form / Form Elements - State / Classes
+  > ngTouched / ngUntouched
+  > ngDirty / ngPristine
+  > ngValid / ngInvalid
+
+---
+
+# Service - client-side businees logic
+
+> ng g s services/counter
+> DI
+> Behaviour
+> Injection
+> DI Token : supplied with
+> Hierarchy : Element Hierarchy / Module Hierarchy
+> DI Modifiers
+> : @Self() : only look into the self component
+> : @SkipSelf() : Donot look up into the self component for Service registration / Skips self component
+> : @Host() : look up inside the self component and parent component (in case of projected content) only.
+> : @Optional() : avoids NullInjector Error at runtime; mentioning the injected service as Optional
+> Consuming Service -> Inject(), Constructor Injection
+
+> XHR Calls (Observables)
+> Interceptors
+
+> Self registration {providedIn Property in @Injectable()}(Tree-shaking)
+
+- heavy used in angular library
+- Service code will not become part of final build, if it is not utilized by the app.
+
+# RxJS
+
+> Observables : pipe, subscribe
+> Observer : next, error, complete
+> Supported Operators : take, map, filter, of, from, interval etc
+> Subjects : are both observer as well observable; multi-casting
+
+- BehaviourSubject : initial value (seed value) for subscription
+- ReplaySubject : replays last emitted values for subscription
+- AsyncSubject : last emitted value once the subject is completed
+
+- Dependency Provider : providers[]
+- Dependency Consumer
+
+# Promises vs Observables
+
+- Promise
+
+  > are asynchronous only
+  > one shot (Fullfilled / Rejected)
+  > eagerly executed
+  > non-cancellable
+  > no operator support
+
+- Observables
+  > are both async and sync
+  > series of events, not one shot
+  > lazily executed; until it is subscribed
+  > are cancellable/ unsubscribe
+  > power operators support

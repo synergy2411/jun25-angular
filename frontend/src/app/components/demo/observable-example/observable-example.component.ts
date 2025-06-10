@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   filter,
   map,
@@ -8,6 +8,10 @@ import {
   from,
   interval,
   tap,
+  Subject,
+  BehaviorSubject,
+  ReplaySubject,
+  AsyncSubject,
 } from 'rxjs';
 
 @Component({
@@ -15,7 +19,24 @@ import {
   templateUrl: './observable-example.component.html',
   styleUrl: './observable-example.component.css',
 })
-export class ObservableExampleComponent {
+export class ObservableExampleComponent implements OnInit {
+  ngOnInit(): void {
+    // const subject = new Subject();
+    // const subject = new BehaviorSubject(100);
+    // const subject = new ReplaySubject(3);
+    const subject = new AsyncSubject();
+
+    subject.next(99);
+    subject.next(100);
+    subject.subscribe((value) => console.log('Subs 1 : ', value));
+    subject.next(102);
+    subject.subscribe((value) => console.log('Subs 2 : ', value));
+    subject.next(104);
+    subject.subscribe((value) => console.log('Subs 3 : ', value));
+    subject.next(106);
+    subject.complete();
+  }
+
   obs$ = new Observable((observer) => {
     setTimeout(() => {
       observer.next('First Package');
