@@ -1,1 +1,17 @@
 <h2 class="text-center">My Expense</h2>
+
+<div class="row">
+  <div class="col-4" *ngFor="let expense of expenses">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="text-center">
+          {{ expense.title | uppercase }}
+        </h4>
+      </div>
+      <div class="card-body">
+        <p>Amount : {{ expense.amount | currency }}</p>
+        <p>Created At : {{ expense.createdAt | date }}</p>
+      </div>
+    </div>
+  </div>
+</div>

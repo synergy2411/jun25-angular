@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { IExpense } from '../model/expense.model';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,7 @@ export class ExpenseService {
 
   // Read
   getAllExpenses() {
-    this.httpClient.get(this.baseUrl).subscribe(console.log);
+    return this.httpClient.get<Array<IExpense>>(this.baseUrl);
   }
 
   createExpense() {}
