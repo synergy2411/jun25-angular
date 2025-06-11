@@ -310,16 +310,16 @@ friends = ["Monica", "Joey", "Ross", "Rachel"] // Pure Change
 > Interceptors
 
 > Self registration {providedIn Property in @Injectable()}(Tree-shaking)
+> : heavy used in angular library
+> : Service code will not become part of final build, if it is not utilized by the app.
 
-- heavy used in angular library
-- Service code will not become part of final build, if it is not utilized by the app.
-
-# RxJS
+# RxJS : Reactive Extension for JavaScript
 
 > Observables : pipe, subscribe
 > Observer : next, error, complete
+> Subjects : are both observer as well observable; multi-casting; pipe, subscribe, next, error, complete
+
 > Supported Operators : take, map, filter, of, from, interval etc
-> Subjects : are both observer as well observable; multi-casting
 
 - BehaviourSubject : initial value (seed value) for subscription
 - ReplaySubject : replays last emitted values for subscription
@@ -344,3 +344,23 @@ friends = ["Monica", "Joey", "Ross", "Rachel"] // Pure Change
   > lazily executed; until it is subscribed
   > are cancellable/ unsubscribe
   > power operators support
+
+---
+
+- XHR Calls (HttpClient)
+- JSON SERVER : Fake REST API server
+- Firebase Cloud - JWT Token
+- Interceptors
+
+# JSON SERVER CONFIG STEPS
+
+- npm install json-server@0.17.4 -g
+- json-server --version
+- Create json file (db.json file)
+- json-server --watch <filename>
+
+# Expenses App
+
+- ExpenseService : GET, POST, PATCH, DELETE
+- ExpensesComponent : Display all expenses, Delete Operation / Edit Operation
+- ExpenseFormComponent : Add New Expense

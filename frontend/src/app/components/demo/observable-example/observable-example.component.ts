@@ -12,6 +12,7 @@ import {
   BehaviorSubject,
   ReplaySubject,
   AsyncSubject,
+  throwError,
 } from 'rxjs';
 
 @Component({
@@ -22,12 +23,12 @@ import {
 export class ObservableExampleComponent implements OnInit {
   ngOnInit(): void {
     // const subject = new Subject();
-    // const subject = new BehaviorSubject(100);
+    const subject = new BehaviorSubject(100);
     // const subject = new ReplaySubject(3);
-    const subject = new AsyncSubject();
+    // const subject = new AsyncSubject();
 
-    subject.next(99);
-    subject.next(100);
+    // subject.next(99);
+    // subject.next(101);
     subject.subscribe((value) => console.log('Subs 1 : ', value));
     subject.next(102);
     subject.subscribe((value) => console.log('Subs 2 : ', value));
@@ -78,11 +79,13 @@ export class ObservableExampleComponent implements OnInit {
       .subscribe(console.log);
 
     // console.log('Start');
-    // this.unSub$ = this.obs$.subscribe({
-    //   next: (data) => console.log(data),
-    //   error: (err) => console.error(err),
-    //   complete: () => console.log('[COMPLETED]'),
-    // });
+    this.unSub$ = this.obs$.subscribe({
+      next: (data) => console.log(data),
+      error: (err) => {
+        console.error(err);
+      },
+      complete: () => console.log('[COMPLETED]'),
+    });
     // console.log('End');
   }
 
