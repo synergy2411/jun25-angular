@@ -10,6 +10,8 @@ import { IExpense } from '../../model/expense.model';
 export class ExpensesComponent implements OnInit {
   expenses!: Array<IExpense>;
   toggle = false;
+  toggleEdit = false;
+  expenseEdit!: IExpense;
 
   constructor(private expenseService: ExpenseService) {}
 
@@ -40,6 +42,21 @@ export class ExpensesComponent implements OnInit {
       if (position >= 0) {
         this.expenses.splice(position, 1);
       }
+    });
+  }
+
+  onEdit(expense: IExpense) {
+    this.expenseEdit = expense;
+    this.toggleEdit = true;
+  }
+
+  onEditExpense(editedExpense: IExpense) {
+    this.expenseService.updateExpense(editedExpense).subscribe(() => {
+      const position = this.expenses.findIndex(
+        (expense) => expense.id === editedExpense.id
+      );
+      this.expenses[position] = editedExpense;
+      this.toggleEdit = false;
     });
   }
 }

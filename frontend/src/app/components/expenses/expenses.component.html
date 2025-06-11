@@ -13,7 +13,14 @@
 <app-expense-form
   *ngIf="toggle"
   (onCloseEvent)="onCloseForm()"
-  (onNewExpenseEvent)="onAddNewExpense($event)"
+  (onExpenseFormEvent)="onAddNewExpense($event)"
+></app-expense-form>
+
+<app-expense-form
+  (onCloseEvent)="toggleEdit = false"
+  *ngIf="toggleEdit"
+  [expense]="expenseEdit"
+  (onExpenseFormEvent)="onEditExpense($event)"
 ></app-expense-form>
 
 <div class="row mb-3">
@@ -28,6 +35,9 @@
         <p>Amount : {{ expense.amount | currency }}</p>
         <p>Created At : {{ expense.createdAt | date }}</p>
         <div class="float-end">
+          <button class="btn btn-outline-success" (click)="onEdit(expense)">
+            Edit
+          </button>
           <button class="btn btn-outline-danger" (click)="onDelete(expense.id)">
             Delete
           </button>
