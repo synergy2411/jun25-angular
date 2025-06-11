@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -24,6 +24,7 @@ import { ReversePipe } from './pipes/reverse.pipe';
 import { ExpensesComponent } from './components/expenses/expenses.component';
 import { ExpenseFormComponent } from './components/expenses/expense-form/expense-form.component';
 import { LoggerInterceptor } from './services/interceptors/logger.interceptor';
+import { GlobalErrorHandlerService } from './services/global-error-handler.service';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,10 @@ import { LoggerInterceptor } from './services/interceptors/logger.interceptor';
       provide: HTTP_INTERCEPTORS, // [Logger, Auth, Cache,....]
       useClass: LoggerInterceptor,
       multi: true,
+    },
+    {
+      provide: ErrorHandler,
+      useClass: GlobalErrorHandlerService,
     },
   ],
   bootstrap: [AppComponent],

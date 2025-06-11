@@ -7,7 +7,7 @@ import {
   HttpResponse,
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, tap, throwError } from 'rxjs';
+import { catchError, Observable, retry, tap, throwError } from 'rxjs';
 
 @Injectable()
 export class LoggerInterceptor implements HttpInterceptor {
@@ -19,9 +19,10 @@ export class LoggerInterceptor implements HttpInterceptor {
 
     return next.handle(req).pipe(
       tap((response) => console.log('[TAP RESPONSE]', response)),
+      retry(3),
       catchError((response: HttpErrorResponse) => {
         if (response.status === 404) {
-          console.error(response.statusText);
+          console.warn(response.statusText);
         }
         return throwError(() => new Error(response.statusText));
       })
