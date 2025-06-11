@@ -42,10 +42,11 @@ export class ExpenseFormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.onExpenseFormEvent.emit({
-      ...this.newExpenseForm.value,
-      id: this.expense.id,
-    });
+    let suppliedExpense = { ...this.newExpenseForm.value };
+    if (this.expense) {
+      suppliedExpense = { ...suppliedExpense, id: this.expense.id };
+    }
+    this.onExpenseFormEvent.emit(suppliedExpense);
   }
 
   onClose() {
