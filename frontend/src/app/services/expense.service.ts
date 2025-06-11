@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class ExpenseService {
-  private baseUrl = 'http://localhost:3000/expensessss';
+  private baseUrl = 'http://localhost:3000/expenses';
 
   constructor(private httpClient: HttpClient) {}
 
