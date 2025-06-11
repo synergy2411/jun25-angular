@@ -1,5 +1,21 @@
 <h2 class="text-center">My Expense</h2>
 
+<div class="row mb-4">
+  <div class="col-4 offset-4">
+    <div class="d-grid">
+      <button class="btn btn-secondary" (click)="toggle = !toggle">
+        Add New Expense
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-expense-form
+  *ngIf="toggle"
+  (onCloseEvent)="onCloseForm()"
+  (onNewExpenseEvent)="onAddNewExpense($event)"
+></app-expense-form>
+
 <div class="row">
   <div class="col-4" *ngFor="let expense of expenses">
     <div class="card">

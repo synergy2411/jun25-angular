@@ -9,6 +9,7 @@ import { IExpense } from '../../model/expense.model';
 })
 export class ExpensesComponent implements OnInit {
   expenses!: Array<IExpense>;
+  toggle = false;
 
   constructor(private expenseService: ExpenseService) {}
 
@@ -16,5 +17,18 @@ export class ExpensesComponent implements OnInit {
     this.expenseService
       .getAllExpenses()
       .subscribe((allExpenses) => (this.expenses = allExpenses));
+  }
+
+  onCloseForm() {
+    this.toggle = false;
+  }
+
+  onAddNewExpense(newExpense: IExpense) {
+    this.expenseService
+      .createExpense(newExpense)
+      .subscribe((createdExpense) => {
+        this.expenses.push(createdExpense);
+        this.onCloseForm();
+      });
   }
 }

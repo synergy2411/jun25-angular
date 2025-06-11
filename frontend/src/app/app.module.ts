@@ -22,6 +22,7 @@ import { CountryCodePipe } from './pipes/country-code.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { ExpensesComponent } from './components/expenses/expenses.component';
+import { ExpenseFormComponent } from './components/expenses/expense-form/expense-form.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ExpensesComponent } from './components/expenses/expenses.component';
     CounterBComponent,
     ObservableExampleComponent,
     ExpensesComponent,
+    ExpenseFormComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],

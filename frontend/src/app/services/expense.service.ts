@@ -15,7 +15,14 @@ export class ExpenseService {
     return this.httpClient.get<Array<IExpense>>(this.baseUrl);
   }
 
-  createExpense() {}
+  // Create
+  createExpense(newExpense: IExpense) {
+    return this.httpClient.post<IExpense>(this.baseUrl, newExpense, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
 
   deleteExpense() {}
 
