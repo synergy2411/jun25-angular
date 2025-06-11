@@ -24,7 +24,10 @@ export class ExpenseService {
     });
   }
 
-  deleteExpense() {}
+  // Delete
+  deleteExpense(expenseId: string) {
+    return this.httpClient.delete(`${this.baseUrl}/${expenseId}`);
+  }
 
   updateExpense() {}
 }

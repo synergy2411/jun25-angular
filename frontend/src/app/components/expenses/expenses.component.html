@@ -16,7 +16,7 @@
   (onNewExpenseEvent)="onAddNewExpense($event)"
 ></app-expense-form>
 
-<div class="row">
+<div class="row mb-3">
   <div class="col-4" *ngFor="let expense of expenses">
     <div class="card">
       <div class="card-header">
@@ -27,6 +27,11 @@
       <div class="card-body">
         <p>Amount : {{ expense.amount | currency }}</p>
         <p>Created At : {{ expense.createdAt | date }}</p>
+        <div class="float-end">
+          <button class="btn btn-outline-danger" (click)="onDelete(expense.id)">
+            Delete
+          </button>
+        </div>
       </div>
     </div>
   </div>
