@@ -32,6 +32,7 @@ import { CounterService } from './services/counter.service';
 import { ProductsComponent } from './components/products/products.component';
 import { OverviewComponent } from './components/products/overview/overview.component';
 import { SpecificationComponent } from './components/products/specification/specification.component';
+import { AuthInterceptor } from './services/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,11 @@ import { SpecificationComponent } from './components/products/specification/spec
     {
       provide: HTTP_INTERCEPTORS, // [Logger, Auth, Cache,....]
       useClass: LoggerInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
       multi: true,
     },
     {
