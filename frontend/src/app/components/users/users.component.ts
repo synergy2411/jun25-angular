@@ -1,22 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CounterService } from '../../services/counter.service';
+import { DataService } from '../../services/data.service';
+import { IUser } from '../../model/user.model';
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrl: './users.component.css',
 })
-export class UsersComponent {
-  user = {
-    firstName: 'bill',
-    lastName: 'gates',
-    company: 'Microsoft Inc',
-    income: 10000,
-    isWorking: true,
-    dob: new Date('Dec 12, 1965'),
-    avatar: './assets/images/bill.jpeg',
-    votes: 120,
-  };
+export class UsersComponent implements OnInit {
+  users!: Array<IUser>;
+
+  constructor(private dataService: DataService) {}
+
+  ngOnInit(): void {
+    this.dataService
+      .getUsersData()
+      .subscribe((allUsers) => (this.users = allUsers));
+  }
 
   onMoreInfo(person: any) {
     alert(
@@ -25,6 +26,6 @@ export class UsersComponent {
   }
 
   onInput(inputValue: string) {
-    this.user.votes = parseInt(inputValue);
+    // this.user.votes = parseInt(inputValue);
   }
 }

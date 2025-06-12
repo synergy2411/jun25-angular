@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "firstName": "bill",
+      "lastName": "gates",
+      "company": "Microsoft Inc",
+      "income": 10000,
+      "isWorking": true,
+      "dob": "1965-12-11T18:30:00.000Z",
+      "avatar": "./assets/images/bill.jpeg",
+      "votes": 120
+    },
+    {
+      "firstName": "tim",
+      "lastName": "b. lee",
+      "company": "World wide Web",
+      "income": 9000,
+      "isWorking": true,
+      "dob": "1966-01-11T18:30:00.000Z",
+      "avatar": "./assets/images/tim.jpeg",
+      "votes": 80
+    }
+  ]
+}

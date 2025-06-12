@@ -7,6 +7,7 @@ import { PipeExampleComponent } from './components/demo/pipe-example/pipe-exampl
 import { ProductsComponent } from './components/products/products.component';
 import { OverviewComponent } from './components/products/overview/overview.component';
 import { SpecificationComponent } from './components/products/specification/specification.component';
+import { AuthGuard } from './services/guards/auth.guard';
 
 export const APP_ROUTES: Routes = [
   {
@@ -29,6 +30,7 @@ export const APP_ROUTES: Routes = [
   {
     path: 'users', // http://localhost:4200/users
     component: UsersComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'expenses', // http://localhost:4200/expenses

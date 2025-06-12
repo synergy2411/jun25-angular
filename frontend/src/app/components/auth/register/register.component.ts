@@ -8,6 +8,7 @@ import {
   ValidationErrors,
   FormArray,
 } from '@angular/forms';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -26,7 +27,7 @@ export class RegisterComponent {
     { id: '103', name: 'Canada' },
   ];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private authService: AuthService) {
     this.registerForm = this.fb.group(
       {
         username: new FormControl('', [
@@ -80,6 +81,10 @@ export class RegisterComponent {
 
   onSubmit() {
     console.log(this.registerForm);
+    this.authService.userRegister(
+      this.registerForm.value.username,
+      this.registerForm.value.password
+    );
   }
 
   onAddnewHobby() {
