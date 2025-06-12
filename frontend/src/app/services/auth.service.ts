@@ -19,7 +19,7 @@ export class AuthService {
 
   auth = getAuth(this.app);
 
-  private token = null;
+  private token: string = '';
 
   constructor(private router: Router) {}
 
@@ -38,5 +38,27 @@ export class AuthService {
     }
   }
 
-  userLogin(email: string, password: string) {}
+  async userLogin(email: string, password: string) {
+    try {
+      const userCreds = await signInWithEmailAndPassword(
+        this.auth,
+        email,
+        password
+      );
+      const token = await userCreds.user.getIdToken();
+      this.token = token;
+      console.log('TOKEN : ', token);
+      this.router.navigateByUrl('/users');
+    } catch (err) {
+      throw err;
+    }
+  }
+
+  getToken() {
+    return this.token;
+  }
+
+  isAuthenticated() {
+    return this.token !== '';
+  }
 }
