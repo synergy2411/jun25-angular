@@ -5,7 +5,6 @@ import { CounterService } from '../../services/counter.service';
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrl: './users.component.css',
-  // providers: [CounterService],
 })
 export class UsersComponent {
   user = {

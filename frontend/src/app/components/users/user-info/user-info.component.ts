@@ -10,7 +10,7 @@ import { CounterService } from '../../../services/counter.service';
 export class UserInfoComponent {
   @Input() user: any;
 
-  constructor(@Host() private counterService: CounterService) {}
+  constructor(private counterService: CounterService) {}
 
   onInput(inputValue: string) {
     this.user.votes = inputValue;

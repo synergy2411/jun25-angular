@@ -2,6 +2,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/auth/login/login.component';
@@ -25,6 +26,9 @@ import { ExpensesComponent } from './components/expenses/expenses.component';
 import { ExpenseFormComponent } from './components/expenses/expense-form/expense-form.component';
 import { LoggerInterceptor } from './services/interceptors/logger.interceptor';
 import { GlobalErrorHandlerService } from './services/global-error-handler.service';
+import { APP_ROUTES } from './app.routes';
+import { HeaderComponent } from './components/header/header.component';
+import { CounterService } from './services/counter.service';
 
 @NgModule({
   declarations: [
@@ -48,8 +52,15 @@ import { GlobalErrorHandlerService } from './services/global-error-handler.servi
     ObservableExampleComponent,
     ExpensesComponent,
     ExpenseFormComponent,
+    HeaderComponent,
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(APP_ROUTES),
+  ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS, // [Logger, Auth, Cache,....]

@@ -347,10 +347,12 @@ friends = ["Monica", "Joey", "Ross", "Rachel"] // Pure Change
 
 ---
 
+- HttpClientModule
 - XHR Calls (HttpClient)
 - JSON SERVER : Fake REST API server
+- Interceptors : intercepting the outgoing request and incoming responses
+- Global Error Handler
 - Firebase Cloud - JWT Token
-- Interceptors
 
 # JSON SERVER CONFIG STEPS
 
@@ -363,4 +365,25 @@ friends = ["Monica", "Joey", "Ross", "Rachel"] // Pure Change
 
 - ExpenseService : GET, POST, PATCH, DELETE
 - ExpensesComponent : Display all expenses, Delete Operation / Edit Operation
-- ExpenseFormComponent : Add New Expense
+- ExpenseFormComponent : Add New Expense / Edit
+
+---
+
+# Routing and Navigation
+
+- Navigate
+- Child routing / nested routing
+- dynamic page content change
+- Guards
+- Query / Route Params
+
+# Single Page App
+
+- No page reload / refresh
+- Less network bandwidth
+- Better user experience
+- Lazy loading
+
+- Search Engine Optimization (SSR - Angular Universal)
+- Heavy initial build
+- increased loading time
