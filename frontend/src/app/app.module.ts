@@ -29,6 +29,9 @@ import { GlobalErrorHandlerService } from './services/global-error-handler.servi
 import { APP_ROUTES } from './app.routes';
 import { HeaderComponent } from './components/header/header.component';
 import { CounterService } from './services/counter.service';
+import { ProductsComponent } from './components/products/products.component';
+import { OverviewComponent } from './components/products/overview/overview.component';
+import { SpecificationComponent } from './components/products/specification/specification.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +56,9 @@ import { CounterService } from './services/counter.service';
     ExpensesComponent,
     ExpenseFormComponent,
     HeaderComponent,
+    ProductsComponent,
+    OverviewComponent,
+    SpecificationComponent,
   ],
   imports: [
     BrowserModule,

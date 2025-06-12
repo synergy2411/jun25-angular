@@ -387,3 +387,13 @@ friends = ["Monica", "Joey", "Ross", "Rachel"] // Pure Change
 - Search Engine Optimization (SSR - Angular Universal)
 - Heavy initial build
 - increased loading time
+
+- Nested Routing
+
+: http://localhost:4200/products ---> loads the products components
+: http://localhost:4200/products/overview ---> overview comp on the products component
+: http://localhost:4200/products/specification ---> loads spec comp on the products component
+
+- Programmatic Navigation
+- Auth Guard
+- Lazy Loading

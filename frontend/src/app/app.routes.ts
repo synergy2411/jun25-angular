@@ -4,6 +4,9 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { UsersComponent } from './components/users/users.component';
 import { ExpensesComponent } from './components/expenses/expenses.component';
 import { PipeExampleComponent } from './components/demo/pipe-example/pipe-example.component';
+import { ProductsComponent } from './components/products/products.component';
+import { OverviewComponent } from './components/products/overview/overview.component';
+import { SpecificationComponent } from './components/products/specification/specification.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -32,8 +35,23 @@ export const APP_ROUTES: Routes = [
     component: ExpensesComponent,
   },
   {
+    path: 'products',
+    component: ProductsComponent,
+    children: [
+      {
+        path: ':productId/:productName/overview',
+        component: OverviewComponent,
+      },
+      { path: ':productId/specification', component: SpecificationComponent },
+    ],
+  },
+  {
     path: '**',
     redirectTo: 'login',
     pathMatch: 'full',
   },
 ];
+
+// http://localhost:4200/products/200/iPhone/overview
+// http://localhost:4200/products/99/specification
+// http://localhost:4200/products/99/specification?name=Iphone
