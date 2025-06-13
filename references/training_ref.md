@@ -369,7 +369,7 @@ friends = ["Monica", "Joey", "Ross", "Rachel"] // Pure Change
 
 ---
 
-# Routing and Navigation
+# Routing and Navigation - @angular/router
 
 - Navigate
 - Child routing / nested routing
@@ -397,3 +397,32 @@ friends = ["Monica", "Joey", "Ross", "Rachel"] // Pure Change
 - Programmatic Navigation
 - Auth Guard
 - Lazy Loading
+
+# Routing Terminologies
+
+- RouterOutlet : provides space on UI to load component template
+- Routes: Route Configuration
+- RouterLink: creates link, does not reload the page
+- RouterModule: router functionalities
+- Router: programmtic navigation
+- ActivatedRoute: access of current URL, route and query parameter access
+- Guard : CanActivate
+
+# Firebase App
+
+- npm install firebase
+
+---
+
+# Modules
+
+> ng g m modules/eager
+> ng g m modules/lazy
+
+# Lazily load the module
+
+# Standalone component
+
+# Testing
+
+# Tips/tricks for debugging and app deployment

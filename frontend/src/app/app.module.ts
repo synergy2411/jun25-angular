@@ -1,10 +1,12 @@
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { EagerModule } from './modules/eager/eager.module';
 
 import { AppComponent } from './app.component';
+import { APP_ROUTES } from './app.routes';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { CounterAComponent } from './components/demo/counter-a/counter-a.component';
@@ -14,6 +16,12 @@ import { DirectiveExampleComponent } from './components/demo/directive-example/d
 import { LifeCycleComponent } from './components/demo/life-cycle/life-cycle.component';
 import { ObservableExampleComponent } from './components/demo/observable-example/observable-example.component';
 import { PipeExampleComponent } from './components/demo/pipe-example/pipe-example.component';
+import { ExpenseFormComponent } from './components/expenses/expense-form/expense-form.component';
+import { ExpensesComponent } from './components/expenses/expenses.component';
+import { HeaderComponent } from './components/header/header.component';
+import { OverviewComponent } from './components/products/overview/overview.component';
+import { ProductsComponent } from './components/products/products.component';
+import { SpecificationComponent } from './components/products/specification/specification.component';
 import { UserImgComponent } from './components/users/user-img/user-img.component';
 import { UserInfoComponent } from './components/users/user-info/user-info.component';
 import { UsersComponent } from './components/users/users.component';
@@ -22,17 +30,9 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { CountryCodePipe } from './pipes/country-code.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ReversePipe } from './pipes/reverse.pipe';
-import { ExpensesComponent } from './components/expenses/expenses.component';
-import { ExpenseFormComponent } from './components/expenses/expense-form/expense-form.component';
-import { LoggerInterceptor } from './services/interceptors/logger.interceptor';
 import { GlobalErrorHandlerService } from './services/global-error-handler.service';
-import { APP_ROUTES } from './app.routes';
-import { HeaderComponent } from './components/header/header.component';
-import { CounterService } from './services/counter.service';
-import { ProductsComponent } from './components/products/products.component';
-import { OverviewComponent } from './components/products/overview/overview.component';
-import { SpecificationComponent } from './components/products/specification/specification.component';
 import { AuthInterceptor } from './services/interceptors/auth.interceptor';
+import { LoggerInterceptor } from './services/interceptors/logger.interceptor';
 
 @NgModule({
   declarations: [
@@ -67,6 +67,7 @@ import { AuthInterceptor } from './services/interceptors/auth.interceptor';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot(APP_ROUTES),
+    EagerModule,
   ],
   providers: [
     {
