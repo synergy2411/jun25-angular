@@ -1,3 +1,22 @@
-<p>test-demo works!</p>
+<h1>Test Demo Component</h1>
 
 <h1>{{ title }}</h1>
+
+<h2>X : {{ x() }}</h2>
+<h2>Y : {{ y() }}</h2>
+<h2>Z : {{ z() }}</h2>
+
+<button mat-raised-button color="primary" (click)="increaseX()">+</button>
+
+<hr />
+<input
+  type="text"
+  [value]="searchTerm()"
+  (input)="changeSearchTerm(inputSerach.value)"
+  #inputSerach
+/>
+
+<p>Term : {{ searchTerm() }}</p>
+
+<button mat-raised-button color="primary">Primary</button>
+<button mat-button color="warn">Warn</button>

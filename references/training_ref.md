@@ -429,4 +429,13 @@ friends = ["Monica", "Joey", "Ross", "Rachel"] // Pure Change
 
 # Testing
 
+> ng test
+> ng test --code-coverage
+
 # Tips/tricks for debugging and app deployment
+
+> ng build | npm run build
+
+# Signals : reactive programming
+
+const [stateVar, stateFn] = useState()
