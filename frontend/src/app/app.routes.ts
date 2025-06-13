@@ -8,6 +8,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { OverviewComponent } from './components/products/overview/overview.component';
 import { SpecificationComponent } from './components/products/specification/specification.component';
 import { AuthGuard } from './services/guards/auth.guard';
+import { IAmStandaloneComponent } from './components/i-am-standalone/i-am-standalone.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -51,6 +52,15 @@ export const APP_ROUTES: Routes = [
     path: 'lazy',
     loadChildren: () =>
       import('./modules/lazy/lazy.module').then((m) => m.LazyModule),
+  },
+  {
+    path: 'standalone',
+    // component: IAmStandaloneComponent, // Eager
+    loadComponent: () =>
+      // Lazy
+      import('./components/i-am-standalone/i-am-standalone.component').then(
+        (m) => m.IAmStandaloneComponent
+      ),
   },
   {
     path: '**',

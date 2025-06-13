@@ -423,6 +423,10 @@ friends = ["Monica", "Joey", "Ross", "Rachel"] // Pure Change
 
 # Standalone component
 
+- with modules based project
+- with no modules project
+- ng g c components/i-am-standalone --standalone
+
 # Testing
 
 # Tips/tricks for debugging and app deployment

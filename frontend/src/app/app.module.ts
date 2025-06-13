@@ -19,6 +19,7 @@ import { PipeExampleComponent } from './components/demo/pipe-example/pipe-exampl
 import { ExpenseFormComponent } from './components/expenses/expense-form/expense-form.component';
 import { ExpensesComponent } from './components/expenses/expenses.component';
 import { HeaderComponent } from './components/header/header.component';
+import { IAmStandaloneComponent } from './components/i-am-standalone/i-am-standalone.component';
 import { OverviewComponent } from './components/products/overview/overview.component';
 import { ProductsComponent } from './components/products/products.component';
 import { SpecificationComponent } from './components/products/specification/specification.component';
@@ -68,6 +69,7 @@ import { LoggerInterceptor } from './services/interceptors/logger.interceptor';
     HttpClientModule,
     RouterModule.forRoot(APP_ROUTES),
     EagerModule,
+    // IAmStandaloneComponent,
   ],
   providers: [
     {
